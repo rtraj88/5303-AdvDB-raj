@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `gift_options` (
        	`allowGiftWrap` TINYINT(1) NOT NULL,
        	`allowGiftMessage` TINYINT(1) NOT NULL,
        	`allowGiftReceipt` TINYINT(1) NOT NULL,
-       	primary key(allowGiftReceipt),
+       	primary key(allowGiftReceipt)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ```
 
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `image_entities` (
        	`mediumImage` varchar(149) NOT NULL,
        	`largeImage` varchar(149) NOT NULL,
        	`entityType` varchar(9) NOT NULL,
-       	primary key(thumbnailImage,mediumImage,largeImage,entityType),
+       	primary key(thumbnailImage,mediumImage,largeImage,entityType)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ```
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `market_place_price` (
        	`availableOnline` tinyint(1) NOT NULL,
        	`clearance` tinyint(1) NOT NULL,
        	`offerType` varchar(16) NOT NULL,
-       	primary key(price,sellerInfo,availableOnline),
+       	primary key(price,sellerInfo,availableOnline)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ```
 
@@ -84,6 +84,6 @@ CREATE TABLE IF NOT EXISTS `products` (
        	`gender` varchar(6) NOT NULL,
        	`isbn` varchar(13) NOT NULL,
        	`preOrderShipsOn` varchar(19) NOT NULL,
-       	PRIMARY KEY(itemId,parentItemId,name,upc,brandName,modelNumber,color,sellerInfo,isbn),
+       	PRIMARY KEY(itemId,parentItemId,name,upc,brandName,modelNumber,color,sellerInfo,isbn)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ```
