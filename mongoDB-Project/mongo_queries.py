@@ -1,6 +1,6 @@
-###Team Members   : Srinivas Kanegave, Ritu Raj
-###Course         : CMPS 5303-Advance Database Management System
-###Project        : MongoDb Project
+##Team Members   : Srinivas Kanegave, Ritu Raj
+##Course         : CMPS 5303-Advance Database Management System
+##Project        : MongoDb Project
 
 
 #1.Find all restaurants with zip code X or Y -Using 89117 and 89122 answer = 1083
