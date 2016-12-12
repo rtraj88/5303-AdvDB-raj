@@ -35,3 +35,16 @@ db.yelp.user.aggregate( [{ $unwind : "$elite" },{ $group : { _id : "$_id", maxEl
 
 #11.Of elite users, whats the average number of years someone is elite.
 db.yelp.user.aggregate([{ $unwind : "$elite" },{ $group : { _id : "$_id", maxElite : { $sum : 1 }}},{$group: {"_id":null, avgEliteUsers: {$avg:"$maxElite"} } }])
+
+### Difficult?
+
+#1. Find the probable city a user lives in based on a set of reviews 
+
+#2. Find the busiest checkin times for all businesses in the `75205 & 75225` zip codes.
+
+#3. Find the business with the most checkins from Friday at 5pm until Sunday morning at 2am. 
+
+#4. Given a restaurant, count the number of reviews by star. Should have 5 different counts, one for each star.
+
+#5. Find all restaurants with over a `3.5 star rating` average rating.
+db.yelp.review.aggregate([{$group:{_id: "$business_id", avgstar:{$avg:"$stars"}}},{$match: {avgstar:{$gt:3.5}}}])
