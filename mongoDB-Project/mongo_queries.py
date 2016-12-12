@@ -42,9 +42,8 @@ db.yelp.user.aggregate([{ $unwind : "$elite" },{ $group : { _id : "$_id", maxEli
  business_id = db.yelp.review.find({"user_id":"e-hBnxMWmzSut-BlyxR2KQ"},{"business_id":1}) 
  result = db.yelp.business.find({"business_id":business_id},{"city":1})
 
-
 #2. Find the busiest checkin times for all businesses in the `75205 & 75225` zip codes.
-
+No businesses found in given zip codes
 #3. Find the business with the most checkins from Friday at 5pm until Sunday morning at 2am. 
 
 #4. Given a restaurant, count the number of reviews by star. Should have 5 different counts, one for each star.
