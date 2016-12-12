@@ -2,7 +2,7 @@
 ##Course         : CMPS 5303-Advance Database Management System
 ##Project        : MongoDb Project
 
-
+```
 #1.Find all restaurants with zip code X or Y -Using 89117 and 89122 answer = 1083
 db.yelp.business.find({$or: [{"full_address":{$regex: '89117'}},{"full_address":{$regex: '89122'}}]}).pretty()
 
@@ -48,3 +48,4 @@ db.yelp.user.aggregate([{ $unwind : "$elite" },{ $group : { _id : "$_id", maxEli
 
 #5. Find all restaurants with over a `3.5 star rating` average rating.
 db.yelp.review.aggregate([{$group:{_id: "$business_id", avgstar:{$avg:"$stars"}}},{$match: {avgstar:{$gt:3.5}}}])
+```
