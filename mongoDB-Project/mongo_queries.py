@@ -4,7 +4,7 @@
 
 
 #1.Find all restaurants with zip code X or Y -Using 89117 and 89122 answer = 1083
-```python
+```
 db.yelp.business.find({$or: [{"full_address":{$regex: '89117'}},{"full_address":{$regex: '89122'}}]}).pretty()
 ```
 
